@@ -3,8 +3,6 @@ import logo from './logo.svg';
 import './App.css';
 
 import {Grid, Row, Col} from 'react-bootstrap';
-import {ToastContainer, toast} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 import {ProductsList, Cart, TotalPrice} from './components';
 import {api} from './api';
@@ -22,11 +20,11 @@ export default class App extends Component {
         this.getProductsList();
     }
 
-    getProductsList = () => {
+    getProductsList() {
         api.getProducts().then(products => this.setState({ products }));
     }
 
-    getProductPromotion = (id) => {
+    getProductPromotion(id) {
         api.getPromotions(id).then(data => {
             this.setState({
                 cart: {
@@ -65,9 +63,7 @@ export default class App extends Component {
     }
 
     handleCheckout = () => {
-        toast.success('Checkout successful!', {
-            position: 'top-right'
-        });
+        alert('Checkout successful!');
         this.setState({
             cart: {}
         });
@@ -89,7 +85,6 @@ export default class App extends Component {
                     <Col xs={4}>
                         <Cart cart={this.state.cart} onRemoveFromCart={this.handlerRemoveFromCart}/>
                         <TotalPrice cart={this.state.cart} onCheckout={this.handleCheckout}/>
-                        <ToastContainer />
                     </Col>
                 </Row>
             </Grid>

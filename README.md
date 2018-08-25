@@ -20,6 +20,8 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](#running-tests) for more information.
 
+![Demo screenshot](public/tests.png?raw=true "")
+
 
 ### Here how it looks:
 
@@ -31,16 +33,15 @@ See the section about [running tests](#running-tests) for more information.
 
 `1. How long did you spend on the test?`
 
-I was making this test about 3-4 hours
+I was making this test about 4-5 hours
 
 `2. What would you add if you had more time?`
 
 I would add:
-1. Unit tests on Jest
-2. More beautiful markup with loader and niceties to attract the customer
-3. Redux to manage the store
-4. Storybook to have reusable components
-5. More advanced backend
+1. More beautiful markup with loader and niceties to attract the customer
+2. Redux to manage the store
+3. Storybook to have reusable components
+4. More advanced backend
 
 `3. How would you improve the product APIs that you had to consume?`
 
